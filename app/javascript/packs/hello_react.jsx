@@ -5,6 +5,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
+import MatExample from "../components/MatExample";
 
 const Hello = props => (
   <div>Hello {props.name}!</div>
@@ -20,7 +21,10 @@ Hello.propTypes = {
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="React" />,
+    <React.Fragment>
+      <MatExample />
+      <Hello name="React" />
+    </React.Fragment>,
     document.body.appendChild(document.createElement('div')),
   )
 })
